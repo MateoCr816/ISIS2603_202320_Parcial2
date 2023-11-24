@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{ dinosaurioDetail.name }}</p>
+  <div class="row">
+    <div class="col-2">
+      <div class="thumb">
+        <img
+          class="img-fluid"
+          src="{{ dinosaurioDetail.image }}"
+          alt="{{ dinosaurioDetail.name }}"
+        />
+      </div>
+    </div>
+    <div class="col">
+      <dl>
+        <dt>Nombre Cientifico</dt>
+        <dd class="caption" *ngFor="let author of dinosaurioDetail.scientificName">
+          {{ dinosaurioDetail.name }}
+        </dd>
+
+        <dt>Alimentación</dt>
+        <dd>{{ dinosaurioDetail.feeding }}</dd>
+        <hr />
+        <dt>Era</dt>
+        <dd>{{ dinosaurioDetail.era }}</dd>
+        <hr />
+        <dt>País</dt>
+        <dd>{{ dinosaurioDetail.discoveryCountry}}</dd>
+        <hr />
+      </dl>
+    </div>
+  </div>
+</div>
